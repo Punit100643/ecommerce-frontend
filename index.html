@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shopeSmart | E-commerce</title>
+  <link rel="shortcut icon" href="imagess.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="navbar">
+  <!-- LEFT -->
+  <div class="nav-left">
+    <h1 class="logo">ShopEase</h1>
+  </div>
+
+  <!-- CENTER -->
+  <div class="nav-center">
+    <select class="category">
+      <option>All</option>
+      <option>Men</option>
+      <option>Women</option>
+      <option>Electronics</option>
+    </select>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search product or brand here..." />
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+    <i class="far fa-heart"></i>
+    <i class="fas fa-shopping-cart"></i>
+    <!-- <a href="#">Login</a> -->
+    <a href="login.html" class="signup">login/Sign Up</a>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero-video1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-text">
+    <span class="tag">#Big Fashion Sale</span>
+    <h1>
+      Limited Time Offer!<br>
+      <span>Up to 50% OFF</span>
+    </h1>
+    <p>Redefine Your Everyday Style</p>
+    <button class="hero-btn">Shop Now</button>
+  </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories">
+  <div class="category-item"><img src="ico/tshirts.ico"><p>T-Shirt</p></div>
+  <div class="category-item"><img src="ico/jackets.ico"><p>Jacket</p></div>
+  <div class="category-item"><img src="ico/shirt.ico"><p>Shirt</p></div>
+  <div class="category-item"><img src="ico/jeans.ico"><p>Jeans</p></div>
+  <div class="category-item"><img src="ico/bag.ico"><p>Bag</p></div>
+  <div class="category-item"><img src="ico/shoes.ico"><p>Shoes</p></div>
+  <div class="category-item"><img src="ico/watch.ico"><p>Watches</p></div>
+  <div class="category-item"><img src="ico/cap.ico"><p>Cap</p></div>
+  <!-- <div class="category-item"><img src="ico/icon.ico"><p>All</p></div> -->
+</section>
+<section class="flash-sale-modern">
+  <!-- HEADER -->
+  <div class="flash-header">
+    <div class="flash-title">
+      <span class="flash-icon">⚡</span>
+      <h2>Flash Sale</h2>
+
+      <div class="timer">
+  <span id="hours">08</span> :
+  <span id="minutes">17</span> :
+  <span id="seconds">56</span>
+</div>
+
+    </div>
+
+   <div class="flash-nav">
+      <button>&larr;</button>
+      <button class="dark">&rarr;</button>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+ <div class="flash-grid">
+
+  <!-- CARD 1 -->
+  <div class="flash-card" onclick="openProduct(
+    'Emerson Quilted Down Jacket',
+    'images/jackets.png',
+    999,
+    1500,
+    'Premium winter jacket with quilted design',
+    'product.html'
+  )">
+    <div class="wishlist">♡</div>
+    <img src="images/jackets.png" alt="">
+    <h4>Emerson Quilted Down Jacket</h4>
+
+    <p class="price">
+      ₹999 <del>₹1500</del>
+    </p>
+
+    <div class="progress">
+      <div class="bar" style="width:90%"></div>
+    </div>
+    <span class="sale-text">9/10 Sale</span>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="flash-card" onclick="openProduct(
+    'Gentlemen Summer Gray Hat',
+    'images/hat1.png',
+    199,
+    350,
+    'Stylish gray hat perfect for summer days',
+    'product2.html'
+  )">
+    <div class="wishlist">♡</div>
+    <img src="images/hat1.png" alt="">
+    <h4>Gentlemen's Summer Gray Hat</h4>
+
+    <p class="price">
+      ₹199 <del>₹350</del>
+    </p>
+
+    <div class="progress">
+      <div class="bar" style="width:90%"></div>
+    </div>
+    <span class="sale-text">9/10 Sale</span>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="flash-card" onclick="openProduct(
+    'Partywear Sneakers Black Shoes',
+    'images/shoes.png',
+    499,
+    845,
+    'Comfortable and stylish black sneakers for parties',
+    'product3.html'
+  )">
+    <div class="wishlist">♡</div>
+    <img src="images/shoes.png" alt="">
+    <h4>Partywear Sneakers Black Shoes</h4>
+
+    <p class="price">
+      ₹499 <del>₹845</del>
+    </p>
+
+    <div class="progress">
+      <div class="bar" style="width:50%"></div>
+    </div>
+    <span class="sale-text">5/10 Sale</span>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="flash-card" onclick="openProduct(
+    'JM LOOKS Women\'s Strappy Heels',
+    'images/heals.png',
+    642,
+    1200,
+    'Elegant strappy heels for women',
+    'product4.html'
+  )">
+    <div class="wishlist">♡</div>
+    <img src="images/heals.png" alt="">
+    <h4>JM LOOKS Women's Strappy Heels</h4>
+
+    <p class="price">
+      ₹642 <del>₹1200</del>
+    </p>
+
+    <div class="progress">
+      <div class="bar" style="width:50%"></div>
+    </div>
+    <span class="sale-text">5/10 Sale</span>
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="today-section">
+  <div class="section-header">
+    <h2>Today's For You</h2>
+  </div>
+
+  <div class="today-products">
+    <div class="today-card">
+      <img src="images/shoes2.png" alt="">
+      <h4>Dior x Air Jordan 1 High UK 11.5 | Nike Air Jordan</h4>
+      <div class="rating">⭐⭐⭐⭐☆</div>
+      <p class="price">₹7,22,000 <del>₹8,00,090</del></p>
+    </div>
+
+    <div class="today-card">
+      <img src="images/shirts.png" alt="">
+      <h4>Calvin Klein Jeans Solid Regular Fit Cotton Shirt</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <p class="price">₹7,583 <del>₹8,999</del></p>
+    </div>
+
+    <div class="today-card">
+      <img src="images/watch.png" alt="">
+      <h4>Apple Watch Ultra 3 GPS + Cellular</h4>
+      <div class="rating">⭐⭐⭐⭐☆</div>
+      <p class="price">₹1,04,900 <del>₹1,10,500</del></p>
+    </div>
+
+    <div class="today-card">
+      <img src="images/bag.png" alt="">
+      <h4>Embossed Lion Travel Backpack in Grey Leather</h4>
+      <div class="rating">⭐⭐⭐⭐☆</div>
+      <p class="price">₹10,053 <del>₹15,581</del></p>
+    </div>
+    <!-- Card 5 -->
+    <div class="today-card">
+      <img src="images/headphones.jpg" alt="">
+      <h4>GOBOULT Fluid X Headphones Bluetooth Wireless </h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <p class="price">₹1,799 <del>₹5,999</del></p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="today-card">
+      <img src="images/jackets.png" alt="">
+      <h4>Winter Jacket</h4>
+      <div class="rating">⭐⭐⭐⭐☆</div>
+      <p class="price">₹3,499 <del>₹5,499</del></p>
+    </div>
+  </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-column">
+      <h2 class="footer-logo">ShopEasy</h2>
+      <p>Your one-stop destination for fashion, electronics & more.</p>
+      <div class="footer-social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">ShopEasy Stories</a></li>
+      </ul>
+    </div>
+
+    <!-- Help -->
+    <div class="footer-column">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Policy -->
+    <div class="footer-column">
+      <h4>Policy</h4>
+      <ul>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer -->
+    <div class="footer-column">
+      <h4>Customer Care</h4>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Track Order</a></li>
+        <li><a href="#">Cancellation</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 ShopEasy. All rights reserved.</p>
+    <div class="payment-icons">
+      <img src="https://img.icons8.com/color/48/visa.png" />
+      <img src="https://img.icons8.com/color/48/mastercard.png" />
+      <img src="https://img.icons8.com/color/48/paytm.png" />
+      <img src="https://img.icons8.com/color/48/google-pay.png" />
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

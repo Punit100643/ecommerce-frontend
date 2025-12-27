@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | ShopEasy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="imagess.png" type="image/png">
+</head>
+<body>
+
+<!-- ================= NAVBAR (SAME AS HOME) ================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <div class="logo">ShopEasy</div>
+  </div>
+
+  <div class="nav-center">
+    <select class="category">
+      <option>All</option>
+      <option>Men</option>
+      <option>Women</option>
+      <option>Electronics</option>
+    </select>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search product or brand here...">
+      <i>🔍</i>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <i>♡</i>
+    <i>🛒</i>
+    <a href="login.html" class="signup">Login / Sign Up</a>
+  </div>
+</header>
+
+<!-- ================= PRODUCT PAGE ================= -->
+<section class="product-page">
+
+  <!-- LEFT : IMAGE GALLERY -->
+  <div class="product-images">
+    <div class="thumbs">
+      <img src="images/heals.png">
+      <img src="images/heals2.webp">
+      <img src="images/heals3.webp">
+    </div>
+
+    <div class="main-image">
+      <img src="images/heals.png">
+    </div>
+  </div>
+
+  <!-- RIGHT : DETAILS -->
+  <div class="product-details">
+    <p class="breadcrumb">women / heels</p>
+
+    <h1>JM LOOKS Women's Strappy Heels For Women</h1>
+    <p class="brand">Premium Collection</p>
+
+    <div class="price-box">
+      <span class="price">₹642</span>
+      <del>₹1200</del>
+      <span class="off">33% OFF</span>
+    </div>
+
+    <div class="rating">
+      ⭐⭐⭐⭐☆ <span>(976 ratings)</span>
+    </div>
+
+    <!-- COLOR -->
+    <div class="option">
+      <h4>Color</h4>
+      <div class="colors">
+        <span class="color beige"></span>
+        <span class="color black"></span>
+        <span class="color white"></span>
+        <!-- <span class="color blue"></span> -->
+      </div>
+    </div>
+
+    <!-- SIZE -->
+    <div class="option">
+      <h4>Size</h4>
+      <div class="sizes">
+        <button>5</button>
+        <button>6</button>
+        <button class="active">7</button>
+        <button>8</button>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="actions">
+      <button class="add-cart">Add to Cart</button>
+      <button class="buy-now">Buy Now</button>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="description">
+      <h4>Product Details</h4>
+      <ul>
+        <li>Stylish strappy design perfect for parties and events</li>
+        <li>Comfortable fit for all-day wear</li>
+        <li>Durable sole for better grip and stability</li>
+        <li>Available in multiple sizes to suit your needs</li>
+        <li>High-quality materials for long-lasting use</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER (SAME AS HOME / LOGIN) ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3 class="footer-logo">ShopEasy</h3>
+      <p>Your one-stop online shopping destination.</p>
+      <div class="footer-social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Policy</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 ShopEasy. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+    // Size selection
+const sizeButtons = document.querySelectorAll(".sizes button");
+
+sizeButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    // remove active from all
+    sizeButtons.forEach(b => b.classList.remove("active"));
+
+    // add active to clicked one
+    btn.classList.add("active");
+
+    // optional: store selected size
+    const selectedSize = btn.innerText;
+    console.log("Selected Size:", selectedSize);
+  });
+});
+
+</script>
+</body>
+</html>

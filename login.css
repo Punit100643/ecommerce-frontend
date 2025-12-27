@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f0f, #e5e7eb);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===== LOGIN PAGE NAVBAR ===== */
+
+.auth-navbar {
+  width: 100%;
+  height: 64px;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.auth-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.auth-nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.auth-nav-right a:hover {
+  color: #000;
+}
+
+.auth-nav-right .active {
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+.auth-container {
+  width: 100%;
+  padding: 20px;
+}
+ 
+.auth-card {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+/* LEFT */
+.auth-left {
+  flex: 1;
+  background: #0d09f1;
+  color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-left span {
+  color: #ffda79;
+}
+
+.auth-left img {
+  width: 220px;
+  margin-top: 30px;
+}
+
+/* RIGHT */
+.auth-right {
+  flex: 1;
+  padding: 50px;
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-color: #000;
+  font-weight: 600;
+}
+
+/* FORM */
+.auth-form {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form.active {
+  display: flex;
+}
+
+.auth-form h3 {
+  margin-bottom: 10px;
+}
+
+.auth-form input {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.auth-btn {
+  background: #000;
+  color: #fff;
+  height: 46px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    text-align: center;
+  }
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ensure container does not stretch */
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* keep card perfectly centered */
+.auth-card {
+  margin: auto;
+}
+/* ===== FOOTER (DO NOT TOUCH ABOVE CODE) ===== */
+
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 60px 0 0;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-logo {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.footer-social i {
+  font-size: 16px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.payment-icons img {
+  height: 28px;
+  margin-left: 10px;
+}
+/* Fix layout so footer spans full width */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* center login section only */
+.auth-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer full width */
+.footer {
+  width: 100%;
+}
