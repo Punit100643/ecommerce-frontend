@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/product.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="shortcut icon" href="imagess.png" type="image/png">
+    <link rel="shortcut icon" href="images/imagess.png" type="image/png">
 </head>
 <body>
 
@@ -31,9 +31,23 @@
     </div>
   </div>
 
-  <div class="nav-right">
-    <i>♡</i>
-    <i>🛒</i>
+  <div class="search-box">
+      <input type="text" placeholder="Search product or brand here...">
+      <i>🔍</i>
+    </div>
+  </div>
+
+ <div class="nav-right">
+
+    <!-- Wishlist -->
+    <i class="far fa-heart"></i>
+
+    <!-- CART (UPDATED) -->
+    <a href="cart.html" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+
+    </a>
     <a href="login.html" class="signup">Login / Sign Up</a>
   </div>
 </header>
@@ -94,7 +108,13 @@
 
     <!-- BUTTONS -->
     <div class="actions">
-      <button class="add-cart">Add to Cart</button>
+  <button onclick="addToCart(
+    'hat-001',
+    'Baseball Cap for Men and Women Adjustable Size for Summer Season, Running Workouts and Outdoor Activities',
+    199,
+    'images/hat1.png'
+  )">Add to Cart</button>
+
       <button class="buy-now">Buy Now</button>
     </div>
 
@@ -162,24 +182,6 @@
     <p>© 2025 ShopEasy. All rights reserved.</p>
   </div>
 </footer>
-<script>
-    // Size selection
-const sizeButtons = document.querySelectorAll(".sizes button");
-
-sizeButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    // remove active from all
-    sizeButtons.forEach(b => b.classList.remove("active"));
-
-    // add active to clicked one
-    btn.classList.add("active");
-
-    // optional: store selected size
-    const selectedSize = btn.innerText;
-    console.log("Selected Size:", selectedSize);
-  });
-});
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

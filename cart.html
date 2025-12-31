@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart | ShopEase</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+  <link rel="shortcut icon" href="images/imagess.png" type="image/png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <h1 class="logo">ShopEase</h1>
+  </div>
+
+  <div class="nav-center">
+    <select class="category">
+      <option>All</option>
+      <option>Men</option>
+      <option>Women</option>
+      <option>Electronics</option>
+    </select>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search product or brand here..." />
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <i class="far fa-heart"></i>
+
+    <a href="cart.html" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </a>
+
+    <a href="login.html" class="signup">Login / Sign Up</a>
+  </div>
+</header>
+
+<!-- ================= CART ================= -->
+<section class="cart-container">
+
+  <h2>Cart</h2>
+
+  <div class="cart-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="cart-left" id="cart-items"></div>
+
+    <!-- RIGHT SIDE -->
+    <div class="cart-right">
+      <h3>Order Summary</h3>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>₹<span id="cart-subtotal">0</span></span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>₹<span id="cart-total">0</span></span>
+      </div>
+
+      <button class="checkout-btn">Continue to Checkout</button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h3 class="footer-logo">ShopEasy</h3>
+      <p>Your one-stop online shopping destination.</p>
+       <div class="footer-social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Policy</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ShopEasy. All rights reserved.</p>
+    <div class="payment-icons">
+      <img src="https://img.icons8.com/color/48/visa.png" />
+      <img src="https://img.icons8.com/color/48/mastercard.png" />
+      <img src="https://img.icons8.com/color/48/paytm.png" />
+      <img src="https://img.icons8.com/color/48/google-pay.png" />
+    </div>
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="script.js"></script>
+
+<script>
+function renderCart() {
+  const cartDiv = document.getElementById("cart-items");
+  const totalSpan = document.getElementById("cart-total");
+  const subSpan = document.getElementById("cart-subtotal");
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cartDiv.innerHTML = "";
+
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartDiv.innerHTML = "<p class='cart-empty'>Your cart is empty.</p>";
+    totalSpan.textContent = "0";
+    subSpan.textContent = "0";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity;
+
+    cartDiv.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}">
+
+        <div class="cart-info">
+          <h4>${item.name}</h4>
+          <p>₹${item.price}</p>
+
+          <div class="qty-box">
+            <button onclick="changeQty(${index}, -1)">−</button>
+            <span>${item.quantity}</span>
+            <button onclick="changeQty(${index}, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="cart-price">
+          ₹${item.price * item.quantity}
+        </div>
+      </div>
+    `;
+  });
+
+  totalSpan.textContent = total;
+  subSpan.textContent = total;
+}
+
+function changeQty(index, change) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart[index].quantity += change;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartCount();
+}
+
+renderCart();
+updateCartCount();
+</script>
+
+</body>
+</html>

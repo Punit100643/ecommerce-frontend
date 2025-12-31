@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>shopeSmart | E-commerce</title>
-  <link rel="shortcut icon" href="imagess.png" type="image/png">
+  <link rel="shortcut icon" href="images/imagess.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -38,12 +38,21 @@
 
   <!-- RIGHT -->
   <div class="nav-right">
+
+    <!-- Wishlist -->
     <i class="far fa-heart"></i>
-    <i class="fas fa-shopping-cart"></i>
-    <!-- <a href="#">Login</a> -->
-    <a href="login.html" class="signup">login/Sign Up</a>
+
+    <!-- CART (UPDATED) -->
+    <a href="cart.html" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </a>
+
+    <!-- Login -->
+    <a href="login.html" class="signup">Login / Sign Up</a>
   </div>
 </header>
+
 
 
 <!-- ================= HERO ================= -->
@@ -120,13 +129,17 @@
     <p class="price">
       ₹999 <del>₹1500</del>
     </p>
+    <!-- <button onclick="addToCart('Winter Jacket', 999, 'images/jacket.png')">
+  Add to Cart
+</button> -->
+    <!-- <button>Add to Cart</button> -->
+
 
     <div class="progress">
       <div class="bar" style="width:90%"></div>
     </div>
     <span class="sale-text">9/10 Sale</span>
   </div>
-
   <!-- CARD 2 -->
   <div class="flash-card" onclick="openProduct(
     'Gentlemen Summer Gray Hat',
