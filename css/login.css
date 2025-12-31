@@ -152,36 +152,7 @@ body {
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .auth-card {
-    flex-direction: column;
-  }
 
-  .auth-left {
-    text-align: center;
-  }
-}
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ensure container does not stretch */
-.auth-container {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* keep card perfectly centered */
-.auth-card {
-  margin: auto;
-}
 /* ===== FOOTER (DO NOT TOUCH ABOVE CODE) ===== */
 
 .footer {
@@ -265,3 +236,34 @@ body {
 .footer {
   width: 100%;
 }
+/* ================= MOBILE FIX (LOGIN) ================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  .auth-navbar {
+    padding: 0 16px;
+  }
+
+  .auth-card {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .auth-left {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .auth-right {
+    padding: 30px;
+  }
+
+  .auth-left img {
+    width: 160px;
+  }
+}
+

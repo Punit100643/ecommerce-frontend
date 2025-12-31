@@ -12,7 +12,10 @@ body {
   background: #f6f6f6;
   color: #111;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 /* =====================
    NAVBAR (BLUR / GLASS)
 ===================== */
@@ -64,7 +67,8 @@ backdrop-filter: blur(12px);
 }
 
 .search-box input {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 42px;
   padding: 0 40px 0 15px;
   border-radius: 25px;
@@ -112,7 +116,7 @@ backdrop-filter: blur(12px);
 ===================== */
 .hero {
   position: relative;
-  height: 70vh;
+  min-height: 70vh;
   width: 100%;
   overflow: hidden;
 
@@ -260,7 +264,7 @@ backdrop-filter: blur(12px);
 /* GRID */
 .flash-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 22px;
 }
 
@@ -513,24 +517,11 @@ backdrop-filter: blur(12px);
 /* =====================
    RESPONSIVE
 ===================== */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0 20px;
-  }
-
-  .nav-center {
-    display: none;
-  }
-
-  .hero {
-    padding: 0 30px;
-    height: 60vh;
-  }
-
-  .hero-text h1 {
-    font-size: 32px;
-  }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
+
 /* ================= FOOTER ================= */
 
 .footer {
@@ -651,3 +642,68 @@ backdrop-filter: blur(12px);
   padding: 2px 6px;
   border-radius: 50%;
 }
+/* ================= MOBILE FIXES (HOME) ================= */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar {
+    height: 60px;
+    padding: 0 14px;
+  }
+   .search-box input {
+    width: 100%;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+}
+  /* .nav-center {
+    display: ; /* hide search on mobile */
+  } */
+
+  .nav-right {
+    gap: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    height: auto;
+    padding: 40px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  /* Categories */
+  .categories {
+    padding: 20px 16px;
+    overflow-x: auto;
+    gap: 20px;
+  }
+
+  /* Flash sale */
+  .flash-sale-modern {
+    margin: 30px 16px;
+  }
+
+  /* Today section */
+  .today-section {
+    padding: 30px 16px;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+

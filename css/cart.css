@@ -151,25 +151,29 @@
   color: #777;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE FIX (CART PAGE) ================= */
+@media (max-width: 768px) {
 
-@media (max-width: 900px) {
+  .cart-container {
+    margin: 90px auto 40px;
+    padding: 0 16px;
+  }
+
   .cart-layout {
     grid-template-columns: 1fr;
   }
 
-  .cart-right {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 600px) {
   .cart-item {
-    grid-template-columns: 60px 1fr auto;
-    gap: 15px;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
   }
 
-  .cart-item img {
-    width: 60px;
-    height: 60px;
+  .cart-price {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .qty-box {
+    gap: 10px;
   }
 }
