@@ -152,26 +152,37 @@ backdrop-filter: blur(12px);
 /* Text */
 .hero-text {
   color: #fff;
-  max-width: 500px;
+  max-width: 560px;
 }
 
+/* small tag text */
 .hero-text .tag {
-  font-size: 14px;
-  opacity: 0.85;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
 }
 
+/* MAIN HEADING */
 .hero-text h1 {
-  font-size: 42px;
-  margin: 10px 0;
+  font-size: 54px;        /* ⬅ BIGGER */
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 14px 0;
 }
 
+/* highlighted text */
 .hero-text h1 span {
   color: #ffda79;
 }
 
+/* description */
 .hero-text p {
-  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  opacity: 0.95;
 }
+
 
 /* Button */
 .hero-btn {
@@ -657,9 +668,9 @@ html, body {
   max-width: 100%;
   height: auto;
 }
-  /* .nav-center {
-    display: ; /* hide search on mobile */
-  } */
+  .nav-center {
+    display: none; /* hide search on mobile */
+  }
 
   .nav-right {
     gap: 12px;
